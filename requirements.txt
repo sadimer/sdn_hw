@@ -1,4 +1,3 @@
 mininet
 os_ken==2.8.1
 pytest
-*.out
