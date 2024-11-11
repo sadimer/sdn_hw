@@ -13,11 +13,11 @@
 
 **Запустить конфигурацию Mininet для отладки вашего алгоритма (на примере задачи 1):**
 
-```sudo python3 tasks/task_1/task.py```
+```sudo python3 tasks/task_1/mininet_cli.py```
 
 **Запустить контроллер OSKen в режиме отладки (на примере задачи 1):**
 
-```sudo osken-manager ```
+```sudo osken-manager tasks/task_1/task.py```
 
 **Запустить оценочное тестирование:**
 
