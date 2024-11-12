@@ -34,5 +34,5 @@ class SimpleSwitch(app_manager.OSKenApp):
     @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def _packet_in_handler(self, ev):
         # WRITE YOUR CODE HERE
-        with open("task_1.out", "w") as file:
+        with open("task_2.out", "w") as file:
             print(f"MAC TABLE:\n{yaml.dump(self.mac_table)}", file=file)
