@@ -30,15 +30,28 @@ h4 = net.addHost(
     ip="10.0.0.4/24",
     mac="10:00:00:00:00:04",
 )
+h5 = net.addHost(
+    "h5",
+    cls=Host,
+    ip="10.0.0.5/24",
+    mac="10:00:00:00:00:05",
+)
+h6 = net.addHost(
+    "h6",
+    cls=Host,
+    ip="10.0.0.6/24",
+    mac="10:00:00:00:00:06",
+)
 
 s1 = net.addSwitch("s1", ip="192.168.0.1")
 s2 = net.addSwitch("s2", ip="192.168.0.2")
 
 net.addLink(h1, s1, addr2="10:00:00:00:00:01")
 net.addLink(h2, s1, addr2="10:00:00:00:00:02")
-net.addLink(h3, s2, addr2="10:00:00:00:00:03")
+net.addLink(h3, s1, addr2="10:00:00:00:00:03")
 net.addLink(h4, s2, addr2="10:00:00:00:00:04")
-
+net.addLink(h5, s2, addr2="10:00:00:00:00:05")
+net.addLink(h6, s2, addr2="10:00:00:00:00:06")
 
 net.addLink(s1, s2)
 

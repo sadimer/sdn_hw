@@ -32,7 +32,7 @@ def mininet():
         mac="10:00:00:00:00:03",
     )
     h4 = net.addHost(
-        "h3",
+        "h4",
         cls=Host,
         ip="10.0.0.4/24",
         mac="10:00:00:00:00:04",
@@ -91,11 +91,11 @@ def test_connectivity(mininet, controller):
     r6 = net.ping([h3, h4])
 
     assert r1 == 0, r1
-    assert r2 == 0, r1
-    assert r3 == 0, r1
-    assert r4 == 0, r1
-    assert r5 == 0, r1
-    assert r6 == 0, r1
+    assert r2 == 0, r2
+    assert r3 == 0, r3
+    assert r4 == 0, r4
+    assert r5 == 0, r5
+    assert r6 == 0, r6
 
 
 def test_mac_table(mininet, controller):
