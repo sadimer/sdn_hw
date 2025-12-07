@@ -1,6 +1,8 @@
 import os
 import filecmp
 
+import time
+
 import pytest
 
 from mininet.log import setLogLevel, info
@@ -88,6 +90,7 @@ def controller():
         os.execlp(
             "/usr/local/bin/osken-manager", "osken-manager", "tasks/task_2/task.py"
         )
+    time.sleep(1)
     yield
     os.kill(pid, 9)
 
